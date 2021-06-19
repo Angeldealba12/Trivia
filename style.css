@@ -172,10 +172,13 @@
     background: inherit;
     overflow: hidden;
     font-family: 'Patrick Hand', cursive;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     bottom: 5rem;
 }
 
+#questionName {
+    width: 90%;
+}
 
 #questionsContainer:before {
     content: "";
