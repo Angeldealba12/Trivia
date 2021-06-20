@@ -32,6 +32,7 @@ let getAPIData = (notReload) => {
 const startGame = () => {
     questionsContainer.style.display = 'flex';
     triviaForm.style.display = 'none';
+    document.getElementById('logo').style.width = "18rem";
 
 
     // variables para controlar preguntas 1 por 1

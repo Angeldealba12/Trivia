@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+
+.main-logo {
+    position: absolute;
+    width: 30rem;
+    top: 320px;
+}
+
 .main-content {
     display: flex;
     flex-wrap: wrap;
@@ -116,12 +123,34 @@
     text-decoration: none;
 }
 
+.img {
+    width: 10%;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 5rem;
+    animation-name: movingImg;
+    animation-duration: 10s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
 
+img {
+    width: 100%;
+}
+
+@keyframes movingImg {
+    0%   {left:0px; ;}
+    100% {right:0px; left:450px;}
+}
 
 .empty-1 {
+    display: flex;
+    align-items: center;
     width: 75%;
     height: 18vh;
 }
+
 
 .empty-2 {
     width: 20%;
