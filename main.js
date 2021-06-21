@@ -1,21 +1,18 @@
-// ELEMENTOS HTML
 
 let triviaForm = document.getElementById("trivia");
 let questionsContainer = document.getElementById("questionsContainer");
-// let id = document.getElementById("id")
 let amount = document.getElementById("amount");
 let category = document.getElementById("category");
 let difficulty = document.getElementById("difficulty");
 let type = document.getElementById("type");
 let answers = document.getElementsByClassName("answer");
 
-// VARIABLES DE CONTROLS
 let questions;
 let quesIndex = 0;
 let correct_index_answer;
 let score = 0;
 
-//FUNCIONES
+
 let getAPIData = (notReload) => {
     notReload.preventDefault();
     let url = `https://opentdb.com/api.php?amount=${amount.value}&category=${category.value}&
@@ -28,7 +25,6 @@ let getAPIData = (notReload) => {
         .then(data => {
             questions = data.results;
             startGame();
-            // console.log(questions);
         });
 };
 
@@ -41,10 +37,8 @@ const startGame = () => {
         showResults();
     }
 
-    // variables para controlar preguntas 1 por 1
     let currentQuestion = questions[quesIndex];
     document.getElementById("questionName").innerText = currentQuestion.question;
-    // console.log(currentQuestion.question);
 
     if (currentQuestion.incorrect_answers.length == 1) {
         document.getElementById(1).innerText = "True";
@@ -100,7 +94,7 @@ for (let i = 0; i < answers.length; i++) {
 };
 
 
-// LISTENERS
+
 triviaForm.addEventListener("submit", getAPIData);
 
 
